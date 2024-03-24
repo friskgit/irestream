@@ -17,18 +17,15 @@
   },
   "homepage": "https://github.com/friskgit/irestream#readme",
   "dependencies": {
-<<<<<<< Updated upstream
     "socket.io": "^4.7.5",
     "webrtc": "^1.14.1"
   },
   "keywords": [],
-  "devDependencies": {}
-=======
+  "devDependencies": {
     "domexception": "^4.0.0",
     "express": "^4.19.1",
     "mic": "^2.1.2",
     "webrtc": "^1.14.1",
     "ws": "^8.16.0"
   }
->>>>>>> Stashed changes
 }

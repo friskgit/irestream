@@ -12,6 +12,7 @@ console.log(`WebSocket server is running on port ${PORT}`);
 const micInstance = mic({
   rate: '16000',
   channels: '1',
+  //bufferSize: 4096,
   debug: true,
 });
 
