@@ -1,0 +1,19 @@
+{
+  "name": "irestream",
+  "version": "1.0.0",
+  "description": "test application for streaming audio",
+  "main": "broadcast.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/friskgit/irestream.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/friskgit/irestream/issues"
+  },
+  "homepage": "https://github.com/friskgit/irestream#readme"
+}
