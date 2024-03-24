@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Stream Client</title>
+</head>
+<body>
+  <h1>Audio Stream Client</h1>
+  <audio controls autoplay></audio>
+
+  <script>
+    const audio = document.querySelector('audio');
+    const ws = new WebSocket('ws://localhost:8080'); // WebSocket server address
+
+    ws.onopen = function() {
+      console.log('Connected to WebSocket server');
+    };
+
+    ws.onmessage = function(event) {
+      const audioBlob = new Blob([event.data], { type: 'audio/wav' });
+      const audioURL = URL.createObjectURL(audioBlob);
+      audio.src = audioURL;
+    };
+
+    ws.onerror = function(error) {
+      console.error('WebSocket error:', error);
+    };
+
+    ws.onclose = function() {
+      console.log('Disconnected from WebSocket server');
+    };
+  </script>
+</body>
+</html>

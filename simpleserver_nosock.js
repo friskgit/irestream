@@ -22,4 +22,8 @@ server.listen(port, function (error) {
 	else {
 		console.log('Server is listening on port' + port);
 	}
+<<<<<<< Updated upstream
 })
+=======
+})
+>>>>>>> Stashed changes

@@ -1,4 +1,4 @@
-const wrtc = require('wrtc');
+const wrtc = require('ws');
 const io = require('socket.io')(server);
 
 // make a minor change to push.
