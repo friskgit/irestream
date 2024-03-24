@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/friskgit/irestream/issues"
   },
-  "homepage": "https://github.com/friskgit/irestream#readme"
+  "homepage": "https://github.com/friskgit/irestream#readme",
+  "dependencies": {
+    "socket.io": "^4.7.5",
+    "webrtc": "^1.14.1"
+  },
+  "keywords": [],
+  "devDependencies": {}
 }
