@@ -12,8 +12,10 @@ console.log(`WebSocket server is running on port ${PORT}`);
 const micInstance = mic({
   rate: '16000',
   channels: '1',
-  //bufferSize: 4096,
-  debug: true,
+  bufferSize: 4096,
+  //precision: "32-bit",
+  //sampleEncoding: "32-bit Signed Integer PCM",
+  debug: true
 });
 
 const micInputStream = micInstance.getAudioStream();
@@ -24,9 +26,11 @@ wss.on('connection', function connection(ws) {
 
   // Pipe microphone input stream to WebSocket
   micInputStream.on('data', function(data) {
-    ws.send(data, { binary: true }, (error) => {
-      if (error) console.error('WebSocket send error:', error);
-    });
+    setTimeout(() => {
+      ws.send(data, { binary: true }, (error) => {
+        if (error) console.error('WebSocket send error:', error);
+      });
+    }, 10); // Introduce a 10ms delay
   });
 
   // Handle WebSocket disconnections
